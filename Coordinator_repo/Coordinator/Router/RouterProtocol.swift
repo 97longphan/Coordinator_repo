@@ -7,7 +7,8 @@
 import UIKit
 
 protocol RouterProtocol {
-    func setRootModule(_ vc: UIViewController)
-    func push(_ vc: UIViewController)
-    func present(_ vc: UIViewController)
+    func setRootModule(_ presentable: Presentable)
+    func push(_ presentable: Presentable)
+    func present(_ presentable: Presentable)
+    func toRoot()
 }

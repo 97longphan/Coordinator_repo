@@ -17,17 +17,23 @@ final class Router: NSObject, RouterProtocol {
         self.uiApplication = uiApplication
     }
     
-    func setRootModule(_ vc: UIViewController) {
+    func setRootModule(_ presentable: Presentable) {
         guard let appDelegate = uiApplication.delegate as? AppDelegate else { return }
-        appDelegate.window?.rootViewController = vc
+        appDelegate.window?.rootViewController = presentable.toPresent()
     }
     
-    func push(_ vc: UIViewController) {
-        rootController?.pushViewController(vc, animated: true)
+    func push(_ presentable: Presentable) {
+        guard let controller = presentable.toPresent() else { return }
+        rootController?.pushViewController(controller, animated: true)
     }
     
-    func present(_ vc: UIViewController) {
-        rootController?.present(vc, animated: true)
+    func present(_ presentable: Presentable) {
+        guard let controller = presentable.toPresent() else { return }
+        rootController?.present(controller, animated: true)
+    }
+    
+    func toRoot() {
+        rootController?.popToRootViewController(animated: true)
     }
     
 }

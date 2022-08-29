@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B6B317128BCBAAB008DC870 /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B6B317028BCBAAB008DC870 /* Presentable.swift */; };
 		4B9A3D0E28B8AA8B00088737 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9A3D0D28B8AA8B00088737 /* BaseCoordinator.swift */; };
 		4B9A3D1128B8ACD700088737 /* RouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9A3D1028B8ACD700088737 /* RouterProtocol.swift */; };
 		4B9A3D1328B8AD3B00088737 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9A3D1228B8AD3B00088737 /* Router.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4B6B317028BCBAAB008DC870 /* Presentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
 		4B9A3D0D28B8AA8B00088737 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
 		4B9A3D1028B8ACD700088737 /* RouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterProtocol.swift; sourceTree = "<group>"; };
 		4B9A3D1228B8AD3B00088737 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 			children = (
 				4B9A3D1028B8ACD700088737 /* RouterProtocol.swift */,
 				4B9A3D1228B8AD3B00088737 /* Router.swift */,
+				4B6B317028BCBAAB008DC870 /* Presentable.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -290,6 +293,7 @@
 				4BCE864128ACE01000A64984 /* AppCoordinator.swift in Sources */,
 				4B9A3D2D28B8BF7D00088737 /* SettingTabbarViewController.swift in Sources */,
 				4B9A3D1A28B8B39A00088737 /* LoginCoordinator.swift in Sources */,
+				4B6B317128BCBAAB008DC870 /* Presentable.swift in Sources */,
 				4B9A3D3528B8C47900088737 /* HomeCoordinator.swift in Sources */,
 				4B9A3D1128B8ACD700088737 /* RouterProtocol.swift in Sources */,
 				4B9A3D2328B8BBFC00088737 /* SignupCoordinator.swift in Sources */,

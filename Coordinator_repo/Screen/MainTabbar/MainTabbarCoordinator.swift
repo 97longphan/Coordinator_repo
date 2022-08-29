@@ -33,6 +33,7 @@ class MainTabbarCoordinator: BaseCoordinator {
     }
     
     override func start() {
+        configTabbar()
         showMainTabbar()
     }
     
@@ -71,7 +72,10 @@ class MainTabbarCoordinator: BaseCoordinator {
         }
         return returnNavi
     }
-
+    
+    private func configTabbar() {
+        tabBarController.tabBar.backgroundColor = .white
+    }
 
 }
 

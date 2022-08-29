@@ -13,6 +13,7 @@ class SettingTabbarViewController: BaseViewController {
         super.viewDidLoad()
         title = "Setting"
     }
+    
     @IBAction func actionPush(_ sender: Any) {
         onPush?()
     }

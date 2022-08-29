@@ -26,6 +26,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let windowWithNavigation = window?.rootViewController as! UINavigationController
         return AppCoordinator(router: Router(rootController: windowWithNavigation))
     }
-
 }
 

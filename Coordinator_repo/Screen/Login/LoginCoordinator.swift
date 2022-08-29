@@ -7,8 +7,12 @@
 
 import Foundation
 
+protocol LoginCoordinatorProtocol: AnyObject {
+    func didEndLoginFlow(coordinator: LoginCoordinator)
+}
+
 class LoginCoordinator: BaseCoordinator {
-    var onEndLoginFlow: (() -> Void)?
+    weak var delegate: LoginCoordinatorProtocol?
     private let router: RouterProtocol
     
     init(router: RouterProtocol) {
@@ -26,9 +30,10 @@ class LoginCoordinator: BaseCoordinator {
         }
         
         loginVC.onSignInSuccess = { [weak self] in
-            self?.onEndLoginFlow?()
+            guard let self = self else { return }
+            self.delegate?.didEndLoginFlow(coordinator: self)
         }
-        
+
         router.setRootModule(loginVC)
     }
     

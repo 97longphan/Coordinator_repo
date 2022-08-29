@@ -17,11 +17,18 @@ class HomeCoordinator: BaseCoordinator {
     }
     
     override func start() {
-        dump(childCoordinators)
-        showHome()
+        view.onPresent = { [weak self] in
+            self?.presentFirstDetail()
+        }
+        showHomeTabbar()
     }
     
-    private func showHome() {
+    private func showHomeTabbar() {
         router.setRootModule(view)
+    }
+    
+    private func presentFirstDetail() {
+        let firstDetailVC = FirstDetailViewController()
+        router.present(firstDetailVC)
     }
 }

@@ -9,4 +9,5 @@ import UIKit
 protocol RouterProtocol {
     func setRootModule(_ vc: UIViewController)
     func push(_ vc: UIViewController)
+    func present(_ vc: UIViewController)
 }

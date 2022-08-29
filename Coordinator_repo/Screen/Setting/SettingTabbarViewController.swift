@@ -8,13 +8,12 @@
 import UIKit
 
 class SettingTabbarViewController: BaseViewController {
-
+    var onPush: (() -> Void)?
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Setting"
-
     }
-
-
-
+    @IBAction func actionPush(_ sender: Any) {
+        onPush?()
+    }
 }

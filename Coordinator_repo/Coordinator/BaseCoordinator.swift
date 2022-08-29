@@ -22,7 +22,6 @@ class BaseCoordinator: Coordinator {
     }
     
     func removeDependency(_ coordinator: Coordinator?) {
-        dump(childCoordinators)
       guard
         childCoordinators.isEmpty == false,
         let coordinator = coordinator

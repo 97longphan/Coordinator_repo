@@ -6,13 +6,12 @@
 //
 
 import UIKit
-fileprivate var isAuth = false
 
 fileprivate enum LaunchInstructor {
     case login, main
     
     static func configure(
-        isAuth: Bool = isAuth) -> LaunchInstructor {
+        isAuth: Bool) -> LaunchInstructor {
             switch (isAuth) {
             case false: return .login
             case true: return .main
@@ -22,9 +21,12 @@ fileprivate enum LaunchInstructor {
 
 class AppCoordinator: BaseCoordinator {
     private let router: RouterProtocol
+    private var isAuth: Bool {
+        return UserDefaults.standard.bool(forKey: "isAuth")
+    }
     
     private var instructor: LaunchInstructor {
-        return LaunchInstructor.configure()
+        return LaunchInstructor.configure(isAuth: isAuth)
     }
     
     init(router: RouterProtocol) {
@@ -42,20 +44,22 @@ class AppCoordinator: BaseCoordinator {
     
     private func runLoginFlow() {
         let loginCoordinator = LoginCoordinator(router: router)
-        loginCoordinator.onEndLoginFlow = { [weak self] in
-            isAuth = true
-            self?.start()
-            self?.removeDependency(loginCoordinator)
-        }
+        loginCoordinator.delegate = self
         addDependency(loginCoordinator)
         loginCoordinator.start()
     }
     
     private func runMainFlow() {
-        
         let mainCoordinartor = MainTabbarCoordinator(router: router)
         addDependency(mainCoordinartor)
         mainCoordinartor.start()
     }
 }
 
+extension AppCoordinator: LoginCoordinatorProtocol {
+    func didEndLoginFlow(coordinator: LoginCoordinator) {
+        UserDefaults.standard.set(true, forKey: "isAuth")
+        start()
+        removeDependency(coordinator)
+    }
+}

@@ -23,6 +23,11 @@
 		4B9A3D2E28B8BF7D00088737 /* SettingTabbarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B9A3D2C28B8BF7D00088737 /* SettingTabbarViewController.xib */; };
 		4B9A3D3028B8C10C00088737 /* MainTabbarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9A3D2F28B8C10C00088737 /* MainTabbarCoordinator.swift */; };
 		4B9A3D3528B8C47900088737 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9A3D3428B8C47900088737 /* HomeCoordinator.swift */; };
+		4B9A3D3728BC700400088737 /* SettingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9A3D3628BC700400088737 /* SettingCoordinator.swift */; };
+		4B9A3D3B28BC83AB00088737 /* FirstDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9A3D3928BC83AB00088737 /* FirstDetailViewController.swift */; };
+		4B9A3D3C28BC83AB00088737 /* FirstDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B9A3D3A28BC83AB00088737 /* FirstDetailViewController.xib */; };
+		4B9A3D3F28BC83B900088737 /* SecondDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B9A3D3D28BC83B900088737 /* SecondDetailViewController.swift */; };
+		4B9A3D4028BC83B900088737 /* SecondDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4B9A3D3E28BC83B900088737 /* SecondDetailViewController.xib */; };
 		4BCE861F28ACDECB00A64984 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCE861E28ACDECB00A64984 /* AppDelegate.swift */; };
 		4BCE862128ACDECB00A64984 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCE862028ACDECB00A64984 /* SceneDelegate.swift */; };
 		4BCE862828ACDECB00A64984 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BCE862728ACDECB00A64984 /* Assets.xcassets */; };
@@ -47,6 +52,11 @@
 		4B9A3D2C28B8BF7D00088737 /* SettingTabbarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingTabbarViewController.xib; sourceTree = "<group>"; };
 		4B9A3D2F28B8C10C00088737 /* MainTabbarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabbarCoordinator.swift; sourceTree = "<group>"; };
 		4B9A3D3428B8C47900088737 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		4B9A3D3628BC700400088737 /* SettingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCoordinator.swift; sourceTree = "<group>"; };
+		4B9A3D3928BC83AB00088737 /* FirstDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstDetailViewController.swift; sourceTree = "<group>"; };
+		4B9A3D3A28BC83AB00088737 /* FirstDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstDetailViewController.xib; sourceTree = "<group>"; };
+		4B9A3D3D28BC83B900088737 /* SecondDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondDetailViewController.swift; sourceTree = "<group>"; };
+		4B9A3D3E28BC83B900088737 /* SecondDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SecondDetailViewController.xib; sourceTree = "<group>"; };
 		4BCE861B28ACDECB00A64984 /* Coordinator_repo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Coordinator_repo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BCE861E28ACDECB00A64984 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4BCE862028ACDECB00A64984 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -119,8 +129,20 @@
 			children = (
 				4B9A3D2C28B8BF7D00088737 /* SettingTabbarViewController.xib */,
 				4B9A3D2B28B8BF7D00088737 /* SettingTabbarViewController.swift */,
+				4B9A3D3628BC700400088737 /* SettingCoordinator.swift */,
 			);
 			path = Setting;
+			sourceTree = "<group>";
+		};
+		4B9A3D3828BC82EA00088737 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				4B9A3D3928BC83AB00088737 /* FirstDetailViewController.swift */,
+				4B9A3D3A28BC83AB00088737 /* FirstDetailViewController.xib */,
+				4B9A3D3D28BC83B900088737 /* SecondDetailViewController.swift */,
+				4B9A3D3E28BC83B900088737 /* SecondDetailViewController.xib */,
+			);
+			path = Detail;
 			sourceTree = "<group>";
 		};
 		4BCE861228ACDECB00A64984 = {
@@ -156,6 +178,7 @@
 		4BCE863228ACDF0100A64984 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				4B9A3D3828BC82EA00088737 /* Detail */,
 				4B9A3D3228B8C3D900088737 /* Setting */,
 				4B9A3D3128B8C3CF00088737 /* Home */,
 				4B9A3D2428B8BEF400088737 /* MainTabbar */,
@@ -239,6 +262,8 @@
 				4B9A3D2128B8BBC600088737 /* SignupViewController.xib in Resources */,
 				4B9A3D2A28B8BF5400088737 /* HomeTabbarViewController.xib in Resources */,
 				4B9A3D1728B8B35D00088737 /* LoginViewController.xib in Resources */,
+				4B9A3D4028BC83B900088737 /* SecondDetailViewController.xib in Resources */,
+				4B9A3D3C28BC83AB00088737 /* FirstDetailViewController.xib in Resources */,
 				4B9A3D2E28B8BF7D00088737 /* SettingTabbarViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -250,12 +275,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B9A3D3F28BC83B900088737 /* SecondDetailViewController.swift in Sources */,
 				4B9A3D1628B8B35D00088737 /* LoginViewController.swift in Sources */,
 				4B9A3D1328B8AD3B00088737 /* Router.swift in Sources */,
 				4B9A3D3028B8C10C00088737 /* MainTabbarCoordinator.swift in Sources */,
 				4B9A3D2028B8BBC600088737 /* SignupViewController.swift in Sources */,
 				4BCE861F28ACDECB00A64984 /* AppDelegate.swift in Sources */,
+				4B9A3D3728BC700400088737 /* SettingCoordinator.swift in Sources */,
 				4B9A3D0E28B8AA8B00088737 /* BaseCoordinator.swift in Sources */,
+				4B9A3D3B28BC83AB00088737 /* FirstDetailViewController.swift in Sources */,
 				4BCE862128ACDECB00A64984 /* SceneDelegate.swift in Sources */,
 				4B9A3D1C28B8B4FC00088737 /* BaseViewController.swift in Sources */,
 				4B9A3D2928B8BF5400088737 /* HomeTabbarViewController.swift in Sources */,
